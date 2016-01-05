@@ -8,14 +8,26 @@ use yii\log\Target;
 
 class SentryTarget extends Target
 {
+    /**
+     * @var string Raven-compatible DSN
+     */
     public $dsn;
 
+    /**
+     * @var array options to be passed to Raven Client
+     */
     public $options = [];
 
+    /**
+     * @var boolean whether to include context message
+     */
     public $includeContextMessage = false;
 
     private $_client;
 
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         parent::init();
@@ -25,6 +37,7 @@ class SentryTarget extends Target
     }
 
     /**
+     * Gets Raven Client instance.
      * @return \Raven_Client
      */
     public function getClient()
@@ -36,6 +49,9 @@ class SentryTarget extends Target
         return $this->_client;
     }
 
+    /**
+     * Sends log message to Sentry instance.
+     */
     public function export()
     {
         foreach ($this->messages as $message) {

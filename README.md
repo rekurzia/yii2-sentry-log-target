@@ -1,6 +1,6 @@
 # Yii2 Sentry log target
 
-Yii2 log target sends log messages to your Sentry instance.
+Yii2 log target which sends log messages to your Sentry instance.
 
 ## Installation
 
@@ -28,10 +28,23 @@ $config['components']['log']['targets'] = [
 ];
 ```
 
-where:
+## Configuration
 
-- `includeContextMessage` is optional, default `false`
-- `options` is optional, default `[]`
+### `dsn`
+
+Raven-compatible DSN.
+
+### `options`
+
+These options will be passed to `Raven_Client` constructor
+
+### `includeContextMessage`
+
+This option allows you to hide `info` level context message.
+
+By default Yii generates also context message for you. It means that there will
+be two messages logged to your Sentry instance on error. First with `error`
+level, second with `info` level.
 
 ## License
 
