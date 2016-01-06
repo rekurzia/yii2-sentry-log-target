@@ -1,5 +1,8 @@
 # Yii2 Sentry log target
 
+[![Latest Stable Version](https://poser.pugx.org/rekurzia/yii2-sentry-log-target/v/stable)](https://packagist.org/packages/rekurzia/yii2-sentry-log-target)
+[![License](https://poser.pugx.org/rekurzia/yii2-sentry-log-target/license)](https://packagist.org/packages/rekurzia/yii2-sentry-log-target)
+
 Yii2 log target which sends log messages to your Sentry instance.
 
 ## Installation
