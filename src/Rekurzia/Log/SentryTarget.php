@@ -55,7 +55,7 @@ class SentryTarget extends Target
     public function export()
     {
         foreach ($this->messages as $message) {
-            $options = [
+            $data = [
                 'level' => Logger::getLevelName($message[1]),
             ];
 
@@ -66,7 +66,7 @@ class SentryTarget extends Target
                 $logMessage = $text->getMessage() . "\n\n" . $logMessage;
             }
 
-            $this->getClient()->captureMessage($logMessage, [], $options);
+            $this->getClient()->captureMessage($logMessage, [], $data);
         }
     }
 
