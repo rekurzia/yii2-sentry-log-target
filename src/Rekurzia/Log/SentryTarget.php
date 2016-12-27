@@ -1,6 +1,6 @@
 <?php
 
-namespace Rekurzia\log;
+namespace Rekurzia\Log;
 
 use yii\base\InvalidConfigException;
 use yii\log\Logger;
