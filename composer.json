@@ -1,7 +1,7 @@
 {
     "name": "rekurzia/yii2-sentry-log-target",
     "type": "library",
-    "description": "Minimal implementation of Yii2 Sentry log target.",
+    "description": "Minimal implementation of Yii2 log target sending messages to Sentry.",
     "keywords": ["Yii2", "Sentry", "log", "target"],
     "homepage": "https://github.com/rekurzia/yii2-sentry-log-target",
     "license": "MIT",
