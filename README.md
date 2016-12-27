@@ -1,5 +1,6 @@
 # Yii2 Sentry log target
 
+[![Build Status](https://travis-ci.org/rekurzia/yii2-sentry-log-target.svg?branch=master)](https://travis-ci.org/rekurzia/yii2-sentry-log-target)
 [![Latest Stable Version](https://poser.pugx.org/rekurzia/yii2-sentry-log-target/v/stable)](https://github.com/rekurzia/yii2-sentry-log-target/releases)
 [![License](https://poser.pugx.org/rekurzia/yii2-sentry-log-target/license)](https://github.com/rekurzia/yii2-sentry-log-target/blob/master/LICENSE.md)
 
