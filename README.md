@@ -20,7 +20,7 @@ Add Sentry target to your configuration
 ```php
 $config['components']['log']['targets'] = [
     [
-        'class' => 'Rekurzia\log\SentryTarget',
+        'class' => Rekurzia\Log\SentryTarget::class,
         'levels' => ['error', 'warning'],
         'dsn' => 'https://abcdefgh:12345678@sentry.example.com/1',
         'includeContextMessage' => true,

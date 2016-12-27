@@ -1,0 +1,17 @@
+sudo: required
+
+language: bash
+
+services:
+  - docker
+
+script:
+  - docker-compose build app
+  - docker-compose run --rm app php tests/provide.php
+  - docker-compose run --rm app composer install
+  - docker-compose run --rm app ./vendor/bin/phpcs --extensions=php --standard=./vendor/yiisoft/yii2-coding-standards/Yii2/ --ignore=vendor,tests .
+  - docker-compose run --rm app php tests/simple.php | grep "Page not found"
+  - docker-compose logs apache | grep "POST /api/90/store/"
+
+after_script:
+  - docker-compose down
