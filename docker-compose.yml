@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    command: bash
+    working_dir: /code
+    volumes:
+      - ./:/code
+    links:
+      - apache
+
+  apache:
+    image: php:7.0-apache
